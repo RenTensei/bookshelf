@@ -103,11 +103,3 @@ function renderFounds(funds) {
     fundCounter += 1;
   }
 }
-
-// audio
-
-const yourSound = new Audio();
-yourSound.src = require('url:../sound/chervonaKalina.mp3');
-document.getElementById('supportU').onclick = function () {
-  yourSound.play();
-};
