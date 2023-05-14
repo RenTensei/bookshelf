@@ -70,9 +70,7 @@ buttonDown.addEventListener('click', function () {
       offset = 0;
     }
     sliderLine.style.top = offset + 'px';
-  }
-  else {
-   
+  } else {
     offset = offset - 52;
     if (offset < -156) {
       offset = 0;

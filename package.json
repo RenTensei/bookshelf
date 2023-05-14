@@ -2,17 +2,17 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://aggenov.github.io/bookshelf",
+  "homepage": "https://rentensei.github.io/bookshelf",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /bookshelf/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aggenov/bookshelf.git"
+    "url": "git+https://github.com/rentensei/bookshelf.git"
   },
   "keywords": [],
-  "author": "Alexander Genov <a.g.genov@gmail.com>",
+  "author": "Andrii Bondarev <scs.bon7@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
@@ -35,3 +35,4 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
+
