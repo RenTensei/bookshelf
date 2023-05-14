@@ -3,7 +3,7 @@
 // https://firebase.google.com/docs/web/setup#available-libraries
 import '../Forms/handleForm';
 
-import { app as firebase } from './firebase-config';
+import { app as firebase } from './config';
 import {
   getAuth,
   createUserWithEmailAndPassword,
