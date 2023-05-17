@@ -1,4 +1,3 @@
-import './JS/autorisation';
 import './JS/home-by-category';
 import './JS/header';
 import './JS/PopUp/modalPopUp';
@@ -11,4 +10,4 @@ import './JS/colorTheme';
 import './JS/BestSellers/bestSellers';
 import './JS/loader';
 import './JS/modal-start';
-import './JS/Auth/app'
+import './JS/Auth/app';
