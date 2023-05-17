@@ -6,6 +6,12 @@ import {
   removeElStorage,
   loadStorageBooks,
 } from '../localStorage/savingInStorage';
+import {
+  addBookToFirestore,
+  removeBookById,
+  removeBookFromFirestore,
+  removeBookFromShoppingList,
+} from '../Auth/app';
 
 const modalBookInfoRef = document.querySelector('.modal-book-info');
 
@@ -31,15 +37,19 @@ document.addEventListener('click', event => {
   if (event.target.matches('.add-to-shoping-list[data-book-id]')) {
     const bookId = event.target.getAttribute('data-book-id');
     const isAdded = loadStorageBooks().some(book => book._id === bookId);
+    const isAddedFireStore = null;
 
     getData(`/books/${bookId}`).then(data => {
       // если нет - сохраняем
       if (!isAdded) {
         saveStorageBooks(data);
+        addBookToFirestore(data);
       }
       // если есть - удаляем
       if (isAdded) {
         removeElStorage(data);
+        // removeBookFromFirestore(data);
+        removeBookFromShoppingList(bookId);
       }
 
       // перерисовка в зависимости от актуального localStorage
@@ -47,7 +57,6 @@ document.addEventListener('click', event => {
     });
   }
 });
-
 
 const refs = {
   backdropForModal: document.querySelector('.backdrop-modal'),
@@ -85,4 +94,3 @@ function openModalWindow() {
   refs.backdropForModal.classList.remove('is-hidden');
   refs.body.classList.add('modal-open');
 }
-
